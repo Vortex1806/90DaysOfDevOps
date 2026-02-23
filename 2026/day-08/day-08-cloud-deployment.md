@@ -1,4 +1,4 @@
-<img width="1440" height="332" alt="Screenshot 2026-02-23 at 9 21 59 PM" src="https://github.com/user-attachments/assets/01d5d81e-5a28-49b2-b522-000058e14767" /><img width="1440" height="390" alt="Screenshot 2026-02-23 at 9 21 11 PM" src="https://github.com/user-attachments/assets/a985cac6-368f-4b42-9db8-5007071c2c96" /><img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 20 49 PM" src="https://github.com/user-attachments/assets/de6e4315-955a-4d3f-9e37-c34b742bcfc3" /><img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 20 20 PM" src="https://github.com/user-attachments/assets/0696c46e-77df-43ea-aef2-0fec5b0ef4b1" /><img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 18 23 PM" src="https://github.com/user-attachments/assets/80af9edb-6bba-4a16-b118-222bba8712cd" /><img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 17 28 PM" src="https://github.com/user-attachments/assets/cac4bd37-d423-4708-af53-f49249834822" /><img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 14 12 PM" src="https://github.com/user-attachments/assets/c35d536f-7184-44c4-8eac-89cf73cdcf07" /># Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
+# Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
 
 ## Commands Used
 
@@ -8,7 +8,7 @@
 ```bash
 ssh -i "devils.pem" ubuntu@ec2-65-0-12-99.ap-south-1.compute.amazonaws.com
 ```
-![Uploading Screenshot 2026-02-23 at 9.14.12 PM.png…](ssh done into the machine)
+<img width="1440" height="332" alt="Screenshot 2026-02-23 at 9 21 59 PM" src="https://github.com/user-attachments/assets/01d5d81e-5a28-49b2-b522-000058e14767" />
 
 ### Update System
 ```bash
@@ -24,7 +24,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
-![Uploading Screenshot 2026-02-23 at 9.17.28 PM.png…](Docker installed)
+<img width="1440" height="390" alt="Screenshot 2026-02-23 at 9 21 11 PM" src="https://github.com/user-attachments/assets/a985cac6-368f-4b42-9db8-5007071c2c96" />
 
 ### Install Nginx
 ```bash
@@ -33,12 +33,11 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
-![Uploading Screenshot 2026-02-23 at 9.18.23 PM.png…](NGINX installed)
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 20 49 PM" src="https://github.com/user-attachments/assets/de6e4315-955a-4d3f-9e37-c34b742bcfc3" />
 
-![Uploading Screenshot 2026-02-23 at 9.20.20 PM.png…](Enabled port access)
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 20 20 PM" src="https://github.com/user-attachments/assets/0696c46e-77df-43ea-aef2-0fec5b0ef4b1" />
 
-
-![Uploading Screenshot 2026-02-23 at 9.20.49 PM.png…](Welcome to nginx)
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 18 23 PM" src="https://github.com/user-attachments/assets/80af9edb-6bba-4a16-b118-222bba8712cd" />
 
 
 ### View Nginx Logs
@@ -47,14 +46,14 @@ cd /var/log/nginx
 ls
 sudo cat access.log
 ```
-![Uploading Screenshot 2026-02-23 at 9.21.11 PM.png…](logs here)
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 17 28 PM" src="https://github.com/user-attachments/assets/cac4bd37-d423-4708-af53-f49249834822" />
 
 
 ### Save Logs to File
 ```bash
 sudo cp /var/log/nginx/access.log ~/nginx-logs.txt
 ```
-![Uploading Screenshot 2026-02-23 at 9.21.59 PM.png…](Copied and checked logs)
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 9 14 12 PM" src="https://github.com/user-attachments/assets/c35d536f-7184-44c4-8eac-89cf73cdcf07" />
 
 ### Download Log File to Local Machine
 ```bash
