@@ -130,6 +130,18 @@ Example:
 git branch
 ```
 
+Create a branch:
+
+```
+git branch feature1
+```
+
+Delete a branch:
+
+```
+git branch -d branch-name
+```
+
 ### git switch
 
 Switches to another branch.
@@ -146,6 +158,12 @@ Example:
 
 ```
 git checkout branch-name
+```
+
+Create and switch to a branch in one command:
+
+```
+git checkout -b new-branch-name
 ```
 
 ---
@@ -170,6 +188,12 @@ Example:
 git push origin main
 ```
 
+Push a new branch and set upstream tracking:
+
+```
+git push -u origin branch-name
+```
+
 ### git pull
 
 Fetches and merges changes from the remote repository.
@@ -177,4 +201,35 @@ Example:
 
 ```
 git pull origin main
+```
+
+### git fetch
+
+Downloads changes from the remote repository without merging them.
+Example:
+
+```
+git fetch origin
+```
+
+---
+
+## Remotes
+
+### git remote -v
+
+Shows the remote repositories linked to the current repository.
+Example:
+
+```
+git remote -v
+```
+
+### git remote add upstream
+
+Adds the original repository as an upstream remote (used when working with forks).
+Example:
+
+```
+git remote add upstream https://github.com/original-owner/repository.git
 ```
