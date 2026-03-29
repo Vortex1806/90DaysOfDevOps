@@ -1,0 +1,5 @@
+services:
+  name: nginx-cont
+  image: nginx:latest
+  ports:
+    - "80:80"
