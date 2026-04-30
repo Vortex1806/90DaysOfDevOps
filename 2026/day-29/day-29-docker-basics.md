@@ -73,6 +73,27 @@ docker run hello-world
 ```bash
 docker run -d -p 8080:80 nginx
 ```
+-d is detached mode
+Docker: exec vs attach
+docker exec -it <container_id> bash
+
+Action: Creates a new process inside an already running container.
+
+Benefit: It is the safest way to "enter" a container.
+
+Exit Behavior: If you type exit, your shell session closes, but the container stays running.
+
+Use Case: Debugging, checking config files, or running a quick script without disturbing the main app.
+
+docker attach <container_id>
+
+Action: Hooks your terminal to the existing main process (PID 1).
+
+Risk: You are effectively "grabbing" the console of the app (like Nginx or a database).
+
+Exit Behavior: If you type exit or hit Ctrl+C, you usually kill the main process, which stops the entire container.
+
+Use Case: Real-time monitoring of a container's primary output when you don't mind if it stops when you're done.
 
 Access in browser: http://localhost:8080
 
